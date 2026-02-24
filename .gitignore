@@ -1,0 +1,20 @@
+# Node and project
+node_modules/
+dist/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/
+
+# Environment
+.env
+
+# Composer / vendor
+vendor/
+
+# Logs
+*.log

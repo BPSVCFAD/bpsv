@@ -23,9 +23,13 @@
       <link href="assets/css/about.css" rel="stylesheet" />
       <link href="style.css" rel="stylesheet">
       <link href="assets/css/responsive.css" rel="stylesheet" />
-      <link href="assets/css/custom.css" rel="stylesheet" />
-   
       <!-- ========== End Stylesheet ========== -->
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="assets/js/html5/html5shiv.min.js"></script>
+      <script src="assets/js/html5/respond.min.js"></script>
+      <![endif]-->
       <!-- ========== Google Fonts ========== -->
       <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800" rel="stylesheet">
@@ -37,8 +41,10 @@
       <!-- Header 
          ============================================= -->
       <header id="home">
+         <!-- Start Navigation -->
          <nav class="navbar navbar-default navbar-fixed white no-background bootsnav">
             <div class="container-full">
+               <!-- Start Atribute Navigation -->
                <div class="attr-nav button fixed-nav">
                   <ul>
                      <li>
@@ -46,6 +52,8 @@
                      </li>
                   </ul>
                </div>
+               <!-- End Atribute Navigation -->
+               <!-- Start Header Navigation -->
                <div class="navbar-header">
                   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                   <i class="fa fa-bars"></i>
@@ -55,6 +63,8 @@
                   <img src="assets/img/logo.png" class="logo logo-scrolled" alt="BPSV Logo">
                   </a>
                </div>
+               <!-- End Header Navigation -->
+               <!-- Collect the nav links, forms, and other content for toggling -->
                <div class="collapse navbar-collapse" id="navbar-menu">
                   <ul class="nav navbar-nav navbar-right" data-in="#" data-out="#">
                      <li class="active"><a href="#home" class="smooth-menu">Home</a></li>
@@ -64,24 +74,28 @@
                      <li><a class="smooth-menu" href="#contact">Contact</a></li>
                   </ul>
                </div>
+               <!-- /.navbar-collapse -->
             </div>
          </nav>
+         <!-- End Navigation -->
       </header>
       <!-- End Header -->
       <!-- Start Banner 
          ============================================= -->
-      <div class="banner-area banner-redesign bg-gradient bg-theme-responsive bg-center text-light" style="background-image: url(assets/img/shape/banner.png);">
-         <div id="bootcarousel" class="carousel light-bg top-padding text-dark slide animate_text" data-ride="carousel" data-interval="5000">
+      <div class="banner-area bg-gradient bg-theme-responsive bg-center text-light" style="background-image: url(assets/img/shape/banner.png);">
+         <div id="bootcarousel" class="carousel light-bg top-padding text-dark slide animate_text" data-ride="carousel" data-interval="10000">
+            <!-- Wrapper for slides -->
             <div class="carousel-inner">
                <div class="item active">
                   <div class="container">
                      <div class="row">
-
                         <div class="double-items">
                            <div class="col-md-7">
                               <div class="info">
                                  <h2 data-animation="animated slideInLeft">People-first Sustainable Development. Doorstep Incubation for Entrepreneurs</h2>
-                                 <p class="banner-copy" data-animation="animated fadeInLeft">Hands-on support to build strong and sustainable local businesses run by women and the youth.</p>
+                                 <ul data-animation="animated fadeInLeft">
+                                    <li>Hands-on support to build strong and sustainable local businesses run by women and the youth.</li>
+                                 </ul>
                                  <a data-animation="animated fadeInDown" class="btn circle btn-light border btn-md" href="#portfolio">Our Projects</a>
                               </div>
                            </div>
@@ -101,7 +115,9 @@
                            <div class="col-md-7">
                               <div class="info">
                                  <h2 data-animation="animated slideInLeft">Expanding Access to Clean Energy</h2>
-                                 <p class="banner-copy" data-animation="animated fadeInLeft">Distributable renewable energy solutions for doubling production and revenue</p>
+                                 <ul data-animation="animated fadeInLeft">
+                                    <li>Distributable renewable energy solutions for doubling production and revenue</li>
+                                 </ul>
                                  <a data-animation="animated fadeInDown" class="btn circle btn-light border btn-md" href="#about">Learn more</a>
                               </div>
                            </div>
@@ -121,7 +137,9 @@
                            <div class="col-md-7">
                               <div class="info">
                                  <h2 data-animation="animated slideInLeft">Banana Fibre Processing for Rural Livelihoods</h2>
-                                 <p class="banner-copy" data-animation="animated fadeInLeft">Converting agricultural by-products into marketable natural fibre products and income opportunities.</p>
+                                 <ul data-animation="animated fadeInLeft">
+                                    <li> Converting agricultural by-products into marketable natural fibre products and income opportunities.</li>
+                                 </ul>
                                  <a data-animation="animated fadeInDown" class="btn circle btn-light border btn-md" href="#about">Learn more</a>
                               </div>
                            </div>
@@ -135,6 +153,8 @@
                   </div>
                </div>
             </div>
+            <!-- End Wrapper for slides -->
+            <!-- Left and right controls -->
             <a class="left carousel-control light" href="#bootcarousel" data-slide="prev">
             <i class="fa fa-angle-left"></i>
             <span class="sr-only">Previous</span>
@@ -149,6 +169,7 @@
       <!-- Start About Us Area -->
       <section class="about-section" id="about">
          <div class="about-container">
+            <!-- Text Content -->
             <div class="about-text">
                <div class="section-label">
                   <span class="label-line"></span>
@@ -164,6 +185,7 @@
                      We specialize in delivering <strong>doorstep incubation services</strong> for micro and nano entrepreneurs in rural areas, with a concentrated focus on integrating Distributed Renewable Energy (DRE), digital technologies, and blended financial services directly into local economies.
                   </p>
                </div>
+               <!-- Key Focus Areas -->
                <div class="focus-areas">
                   <h3 class="focus-title">Our Core Focus</h3>
                   <div class="focus-list">
@@ -213,10 +235,11 @@
                   </div>
                </div>
             </div>
+            <!-- Image -->
             <div class="about-image">
                <div class="image-frame">
                   <img
-                     src="assets/img/Dhar Atta.JPG"
+                     src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
                      alt="Community development in rural India - BPSV team working with local entrepreneurs"
                      loading="lazy"
                      />
@@ -224,11 +247,26 @@
                      <span>Building Sustainable Futures Together</span>
                   </div>
                </div>
+               <!--<div class="image-stats">
+                  <div class="stat-item">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Entrepreneurs Supported</span>
+                  </div>
+                  <div class="stat-item">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Communities Reached</span>
+                  </div>
+                  <div class="stat-item">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">Northeast States</span>
+                  </div>
+                  </div>-->
             </div>
          </div>
       </section>
       <!-- End About Us Area -->
-      <!-- Start Services Area -->
+      <!-- Start Services Area 
+         ============================================= -->
       <div id="services" class="services-area icon-multi-color carousel-shadow default-padding-top">
          <div class="container">
             <div class="row">
@@ -249,6 +287,7 @@
                <div class="row">
                   <div class="col-md-12">
                      <div class="services-carousel-4-col owl-carousel owl-theme">
+                        <!-- Single Item -->
                         <div class="item">
                            <div class="icon">
                               <i class="flaticon-architect"></i>
@@ -258,8 +297,10 @@
                               Community-driven development centers that accelerate local enterprise growth 
                               through training, resources, and market linkages.
                            </p>
-                           
+                           <a href="#portfolio"><i class="fas fa-angle-right"></i> View Projects</a>
                         </div>
+                        <!-- End Single Item -->
+                        <!-- Single Item -->
                         <div class="item">
                            <div class="icon">
                               <i class="flaticon-software"></i>
@@ -269,8 +310,10 @@
                               Decentralized Renewable Energy systems for agri-processing, replacing diesel 
                               with sustainable solar-powered alternatives.
                            </p>
-                       
+                           <a href="#portfolio"><i class="fas fa-angle-right"></i> Learn more</a>
                         </div>
+                        <!-- End Single Item -->
+                        <!-- Single Item -->
                         <div class="item">
                            <div class="icon">
                               <i class="flaticon-testing"></i>
@@ -280,8 +323,10 @@
                               End-to-end support for rural entrepreneurs including technology implementation, 
                               maintenance services, and business development.
                            </p>
-                            
+                           <a href="#portfolio"><i class="fas fa-angle-right"></i> Our Approach</a>
                         </div>
+                        <!-- End Single Item -->
+                        <!-- Single Item -->
                         <div class="item">
                            <div class="icon">
                               <i class="flaticon-update"></i>
@@ -291,8 +336,9 @@
                               Monitoring, evaluation, and consulting services for development organizations 
                               and government bodies on sustainable rural development.
                            </p>
-                           
+                           <a href="#contact"><i class="fas fa-angle-right"></i> Contact Us</a>
                         </div>
+                        <!-- End Single Item -->
                      </div>
                   </div>
                </div>
@@ -341,6 +387,7 @@
                <div class="col-md-6 info">
                   <h4>Our Methodology</h4>
                   <h2>How CFAD <strong>Works</strong></h2>
+                  <!-- Tab Nav -->
                   <div class="tab-navigation text-center">
                      <ul class="nav nav-pills">
                         <li class="active">
@@ -360,7 +407,10 @@
                         </li>
                      </ul>
                   </div>
+                  <!-- End Tab Nav -->
+                  <!-- Start Tab Content -->
                   <div class="tab-content">
+                     <!-- Incubation -->
                      <div id="tab1" class="tab-pane fade active in">
                         <div class="info">
                            <p>
@@ -382,6 +432,7 @@
                            </ul>
                         </div>
                      </div>
+                     <!-- DRE -->
                      <div id="tab2" class="tab-pane fade">
                         <div class="info">
                            <p>
@@ -403,6 +454,7 @@
                            </ul>
                         </div>
                      </div>
+                     <!-- Digital -->
                      <div id="tab3" class="tab-pane fade">
                         <div class="info">
                            <p>
@@ -425,6 +477,7 @@
                         </div>
                      </div>
                   </div>
+                  <!-- End Tab Content -->
                </div>
             </div>
          </div>
@@ -449,6 +502,7 @@
          </div>
          <div class="container-full">
             <div class="portfolio-items text-light magnific-mix-gallery masonary portfolio-carousel-3-col owl-carousel owl-theme">
+               <!-- Project 1 -->
                <div class="pf-item">
                   <div class="item-effect">
                      <div class="thumb">
@@ -464,6 +518,7 @@
                      </div>
                   </div>
                </div>
+               <!-- Project 2 -->
                <div class="pf-item">
                   <div class="item-effect">
                      <div class="thumb">
@@ -479,6 +534,7 @@
                      </div>
                   </div>
                </div>
+               <!-- Project 3 -->
                <div class="pf-item">
                   <div class="item-effect">
                      <div class="thumb">
@@ -494,6 +550,7 @@
                      </div>
                   </div>
                </div>
+               <!-- Project 4 -->
                <div class="pf-item">
                   <div class="item-effect">
                      <div class="thumb">
@@ -517,6 +574,7 @@
 <div id="team" class="team-area shape default-padding bottom-less">
    <div class="container">
 
+      <!-- Heading -->
       <div class="row">
          <div class="col-md-8 col-md-offset-2">
             <div class="site-heading text-center">
@@ -529,8 +587,10 @@
          </div>
       </div>
 
+      <!-- Team Members -->
       <div class="row team-items text-center">
 
+         <!-- Nagakarthik MP -->
          <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 single-item">
             <div class="item">
                <div class="thumb">
@@ -553,6 +613,7 @@
             </div>
          </div>
 
+         <!-- Neil -->
          <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 single-item">
             <div class="item">
                <div class="thumb">
@@ -575,6 +636,7 @@
             </div>
          </div>
 
+         <!-- Gunajit -->
          <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 single-item">
             <div class="item">
                <div class="thumb">
@@ -588,6 +650,7 @@
             </div>
          </div>
 
+         <!-- Atanu -->
          <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 single-item">
             <div class="item">
                <div class="thumb">
@@ -601,6 +664,7 @@
             </div>
          </div>
 
+         <!-- Himadri -->
          <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 single-item">
             <div class="item">
                <div class="thumb">
@@ -614,6 +678,7 @@
             </div>
          </div>
 
+         <!-- Rohan -->
          <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 single-item">
             <div class="item">
                <div class="thumb">
@@ -647,6 +712,7 @@
             <div class="col-md-8 col-md-offset-2">
                <div class="row">
                   <div class="testimonial-items testimonial-carousel owl-carousel owl-theme">
+                     <!-- Single Item -->
                      <div class="item">
                         <div class="col-md-5 thumb">
                            <img src="assets/img/clasplogo.png" alt="CLASP Partnership">
@@ -660,6 +726,8 @@
                            </p>
                         </div>
                      </div>
+                     <!-- End Single Item -->
+                     <!-- Single Item -->
                      <div class="item">
                         <div class="col-md-5 thumb">
                            <img src="assets/img/selco.png" alt="SELCO Foundation Partnership">
@@ -673,6 +741,7 @@
                            </p>
                         </div>
                      </div>
+<!-- End Single Item -->
 <div class="item">
    <div class="col-md-5 thumb">
       <img src="assets/img/deltalogo.png" alt="Delta Prize - Aahar Bazaar Project">
@@ -686,6 +755,8 @@
       </p>
    </div>
 </div>
+<!-- End Single Item -->
+ <!-- End Single Item -->
 <div class="item">
    <div class="col-md-5 thumb">
       <img src="assets/img/unitedwayhyderabad.png" alt="United Way Hyderabad">
@@ -699,6 +770,7 @@
       </p>
    </div>
 </div>
+<!-- End Single Item -->
 
 
                   </div>
@@ -719,6 +791,7 @@
                      </div>
                      <div class="acd-items acd-arrow">
                         <div class="panel-group symb" id="accordion">
+                           <!-- Single Item -->
                            <div class="panel panel-default">
                               <div class="panel-heading">
                                  <h4 class="panel-title">
@@ -735,6 +808,8 @@
                                  </div>
                               </div>
                            </div>
+                           <!-- End Single Item -->
+                           <!-- Single Item -->
                            <div class="panel panel-default">
                               <div class="panel-heading">
                                  <h4 class="panel-title">
@@ -751,6 +826,8 @@
                                  </div>
                               </div>
                            </div>
+                           <!-- End Single Item -->
+                           <!-- Single Item -->
                            <div class="panel panel-default">
                               <div class="panel-heading">
                                  <h4 class="panel-title">
@@ -767,8 +844,10 @@
                                  </div>
                               </div>
                            </div>
+                           <!-- Single Item -->
                         </div>
                      </div>
+                     <!-- End Faq -->
                      <a class="btn btn-theme effect btn-sm" href="#contact">Ask another question</a>
                   </div>
                   <div class="col-md-6 contact-forms">
@@ -834,6 +913,7 @@
                                  </button>
                               </div>
                            </div>
+                           <!-- Alert Message -->
                            <div class="col-md-12 alert-notification">
                               <div id="message" class="alert-msg"></div>
                            </div>
@@ -889,6 +969,9 @@
                            </li>
                            <li>
                               <a href="#portfolio">Projects</a>
+                           </li>
+                           <li>
+                              <a href="#revenue">Revenue</a>
                            </li>
                            <li>
                               <a href="#team">Team</a>

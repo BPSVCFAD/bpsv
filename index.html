@@ -24,6 +24,49 @@
       <link href="style.css" rel="stylesheet">
       <link href="assets/css/responsive.css" rel="stylesheet" />
       <link href="assets/css/custom.css" rel="stylesheet" />
+      <style>
+         .banner-area .carousel-control { z-index: 100 !important; }
+         .navbar-brand.brand-premium {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+         }
+         .navbar-brand.brand-premium .logo {
+            width: 20%;
+         }
+         
+         .navbar-brand.brand-premium .logo-text {
+            font-family: "Poppins", sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            line-height: 1;
+            padding: 7px 12px;
+            border-radius: 999px;
+            transition: all 0.25s ease;
+            margin-left: 2px;
+            white-space: nowrap;
+         }
+         @media (max-width: 767px) {
+            .navbar-brand.brand-premium .logo-text {
+               font-size: 12px;
+               letter-spacing: 0.05em;
+               padding: 6px 9px;
+            }
+         }
+         .navbar-brand.brand-premium .logo-text.logo-display {
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+         }
+         .navbar-brand.brand-premium .logo-text.logo-scrolled {
+            color: #12213a;
+            background: rgba(18, 33, 58, 0.08);
+            border: 1px solid rgba(18, 33, 58, 0.25);
+         }
+      </style>
    
       <!-- ========== End Stylesheet ========== -->
       <!-- ========== Google Fonts ========== -->
@@ -50,9 +93,11 @@
                   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                   <i class="fa fa-bars"></i>
                   </button>
-                  <a class="navbar-brand" href="#home">
-                  <img src="assets/img/logo-light.png" class="logo logo-display" alt="BPSV Logo" style="width: 30%;">
-                  <img src="assets/img/logo.png" class="logo logo-scrolled" alt="BPSV Logo">
+                  <a class="navbar-brand brand-premium" href="#home">
+                  <img src="assets/img/logo-light.png" class="logo logo-display" alt="BPSV Logo">
+                  <img src="assets/img/logo1.1.png" class="logo logo-scrolled" alt="BPSV Logo" style="width: 60px;">
+                  <span class="logo-text logo-display">Beyond Purpose</span>
+                  <span class="logo-text logo-scrolled">Beyond Purpose</span>
                   </a>
                </div>
                <div class="collapse navbar-collapse" id="navbar-menu">
@@ -71,7 +116,7 @@
       <!-- Start Banner 
          ============================================= -->
       <div class="banner-area banner-redesign bg-gradient bg-theme-responsive bg-center text-light" style="background-image: url(assets/img/shape/banner.png);">
-         <div id="bootcarousel" class="carousel light-bg top-padding text-dark slide animate_text" data-ride="carousel" data-interval="5000">
+         <div id="bootcarousel" class="carousel light-bg top-padding text-dark slide animate_text">
             <div class="carousel-inner">
                <div class="item active">
                   <div class="container">
@@ -114,14 +159,14 @@
                      </div>
                   </div>
                </div>
-                              <div class="item">
+               <div class="item">
                   <div class="container">
                      <div class="row">
                         <div class="double-items">
                            <div class="col-md-7">
                               <div class="info">
-                                 <h2 data-animation="animated slideInLeft">Banana Fibre Processing for Rural Livelihoods</h2>
-                                 <p class="banner-copy" data-animation="animated fadeInLeft">Converting agricultural by-products into marketable natural fibre products and income opportunities.</p>
+                                 <h2 data-animation="animated slideInLeft">Agri Waste Fibre Processing for Rural Livelihoods</h2>
+                                 <p class="banner-copy" data-animation="animated fadeInLeft">Central processing facility for banana and pineapple fibre for use by packaging and garment industries. Aggregation through Integrated Village Cooperative Societies (IVCS), Meghalaya</p>
                                  <a data-animation="animated fadeInDown" class="btn circle btn-light border btn-md" href="#about">Learn more</a>
                               </div>
                            </div>
@@ -135,11 +180,11 @@
                   </div>
                </div>
             </div>
-            <a class="left carousel-control light" href="#bootcarousel" data-slide="prev">
+            <a class="left carousel-control light" href="javascript:void(0);" onclick="event.preventDefault(); $('#bootcarousel').carousel('prev'); return false;">
             <i class="fa fa-angle-left"></i>
             <span class="sr-only">Previous</span>
             </a>
-            <a class="right carousel-control light" href="#bootcarousel" data-slide="next">
+            <a class="right carousel-control light" href="javascript:void(0);" onclick="event.preventDefault(); $('#bootcarousel').carousel('next'); return false;">
             <i class="fa fa-angle-right"></i>
             <span class="sr-only">Next</span>
             </a>
@@ -155,7 +200,7 @@
                   <span class="label-text">WHO WE ARE</span>
                   <span class="label-line"></span>
                </div>
-               <h2 class="section-title">Beyond Purpose <span class="highlight">Social Ventures</span></h2>
+               <h2 class="section-title">Beyond Purpose <span class="highlight">Social Venture</span></h2>
                <p class="intro-text">
                   A pioneering social enterprise dedicated to building sustainable, resilient communities across India through innovative market-based solutions.
                </p>
@@ -467,8 +512,8 @@
                <div class="pf-item">
                   <div class="item-effect">
                      <div class="thumb">
-                        <img src="assets/img/cfad.png" alt="CFAD Expansion">
-                        <a href="assets/img/cfad.png" class="item popup-link"><i class="fa fa-plus"></i></a>
+                        <img src="assets/img/Sanghamitra 3.png" alt="CFAD Expansion">
+                        <a href="assets/img/Sanghamitra 3.png" class="item popup-link"><i class="fa fa-plus"></i></a>
                      </div>
                      <div class="icons">
                         <h4><a href="#">CFAD Expansion</a></h4>
@@ -618,7 +663,17 @@
             <div class="item">
                <div class="thumb">
                   <img src="assets/img/rohan.png" alt="Rohan">
+                                    <div class="social">
+                     <ul>
+                        <li class="linkedin">
+                           <a href="https://www.linkedin.com/in/rohanbose-rb/" target="_blank">
+                              <i class="fab fa-linkedin-in"></i>
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
                </div>
+               
                <div class="info">
                   <h4>Rohan Bose</h4>
                   <span>Software Analyst</span>
@@ -979,5 +1034,6 @@
       <script src="assets/js/circle-progress.js"></script>
       <script src="assets/js/bootsnav.js"></script>
       <script src="assets/js/main.js"></script>
+      <script>$(document).ready(function(){ $('#bootcarousel').carousel({interval: 5000}); });</script>
    </body>
 </html>

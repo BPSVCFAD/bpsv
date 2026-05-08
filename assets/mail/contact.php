@@ -55,7 +55,7 @@ $organization = htmlspecialchars($organization, ENT_QUOTES, 'UTF-8');
 // Example $address = "joe.doe@yourdomain.com";
 
 //$address = "example@themeforest.net";
-$address = getenv('BPSV_RECIPIENT_EMAIL') ? getenv('BPSV_RECIPIENT_EMAIL') : "atanu@sauramandala.org";
+$address = getenv('BPSV_RECIPIENT_EMAIL') ? getenv('BPSV_RECIPIENT_EMAIL') : "rohan.bose@sauramandala.org";
 
 // SMTP configuration (set these in Apache/PHP environment for production use)
 // Example values for Gmail: host=smtp.gmail.com, port=465, secure=ssl, user=you@gmail.com, pass=app-password

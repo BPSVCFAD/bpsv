@@ -396,9 +396,16 @@
         ================================================== */
         $('.contact-form').each(function() {
             var formInstance = $(this);
-            formInstance.submit(function() {
+            var toastTimer = null;
 
+            formInstance.submit(function() {
                 var action = $(this).attr('action');
+
+                // Cancel any existing auto-hide timer
+                if (toastTimer) {
+                    clearTimeout(toastTimer);
+                    toastTimer = null;
+                }
 
                 $("#message").slideUp(750, function() {
                     $('#message').hide();
@@ -409,16 +416,40 @@
 
                     $.post(action, formInstance.serialize(),
                         function(data) {
-                            document.getElementById('message').innerHTML = data;
+                            var isSuccess = data.indexOf('alert-success') !== -1;
+                            document.getElementById('message').innerHTML =
+                                data +
+                                '<button class="toast-close" title="Dismiss" aria-label="Dismiss">&times;</button>' +
+                                '<div class="toast-progress"></div>';
+
                             $('#message').slideDown('slow');
                             $('.contact-form img.loader').fadeOut('slow', function() {
-                                $(this).remove()
+                                $(this).remove();
                             });
                             $('#submit').removeAttr('disabled');
+
+                            // Reset all fields on success
+                            if (isSuccess) {
+                                formInstance[0].reset();
+                            }
+
+                            // Auto-hide toast after 15 seconds
+                            toastTimer = setTimeout(function() {
+                                $('#message').slideUp(750);
+                            }, 15000);
                         }
                     );
                 });
                 return false;
+            });
+
+            // Dismiss toast on close button click
+            formInstance.on('click', '.toast-close', function() {
+                if (toastTimer) {
+                    clearTimeout(toastTimer);
+                    toastTimer = null;
+                }
+                $('#message').slideUp(750);
             });
         });
 

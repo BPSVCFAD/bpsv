@@ -1,0 +1,6 @@
+# Allow GET and POST to contact.php
+<Files "contact.php">
+    <LimitExcept GET POST HEAD>
+        Require all denied
+    </LimitExcept>
+</Files>

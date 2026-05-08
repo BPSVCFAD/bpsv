@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xargs grep:*)",
+      "Bash(ls:*)",
+      "Bash(grep -E \"\\\\.\\(html|css|js|svg|png|jpg|gif|woff|ttf|eot\\)$\")",
+      "Bash(wc:*)"
+    ]
+  }
+}

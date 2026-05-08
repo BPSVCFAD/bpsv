@@ -104,7 +104,14 @@
                   <ul class="nav navbar-nav navbar-right" data-in="#" data-out="#">
                      <li class="active"><a href="#home" class="smooth-menu">Home</a></li>
                      <li><a class="smooth-menu" href="#about">About</a></li>
-                     <li><a class="smooth-menu" href="#portfolio">Projects</a></li>
+                     <li class="dropdown">
+                        <a href="#portfolio" class="smooth-menu dropdown-toggle" data-toggle="dropdown">Projects</a>
+                        <ul class="dropdown-menu">
+                           <li><a href="projects/efficiency-for-access-enabling-dre-agribusiness/">Efficiency for Access: Enabling DRE Agribusiness</a></li>
+                           <li><a href="projects/using-PURE-appliances-in-the-Livelihoods-Enterprises/">CLASP MAF – Scaling DRE through Ecosystem Building</a></li>
+                           <li><a href="projects/doorstep-business-services/">DRIVE – Doorstep Business Services for Women Foodpreneurs</a></li>
+                        </ul>
+                     </li>
                      <li><a class="smooth-menu" href="#team">Team</a></li>
                      <li><a class="smooth-menu" href="#contact">Contact</a></li>
                   </ul>
@@ -501,9 +508,9 @@
                         <a href="assets/img/empower.png" class="item popup-link"><i class="fa fa-plus"></i></a>
                      </div>
                      <div class="icons">
-                        <h4><a href="#">Empowering Rural Entrepreneurs</a></h4>
+                        <h4><a href="projects/efficiency-for-access-enabling-dre-agribusiness/">Empowering Rural Entrepreneurs</a></h4>
                         <div class="cat">
-                           <a href="#">Meghalaya (Apr 2024 - Dec 2025) — CLASP</a>
+                           <a href="projects/efficiency-for-access-enabling-dre-agribusiness/">Meghalaya (Apr 2024 - Dec 2025) — CLASP</a>
                         </div>
                         <p>Diesel replacement of agri-processing machinery with sustainable solar-powered alternatives.</p>
                      </div>
@@ -830,46 +837,55 @@
                      <div class="form-items bg-cover shadow dark-hard text-light">
                         <h2>Partner With <strong>Us</strong></h2>
                         <p>Interested in collaboration, funding opportunities, or learning more about our work?</p>
+<<<<<<< HEAD
                         <form action="https://formsubmit.co/rohan.bose@sauramandala.org" method="POST" class="contact-form">
+=======
+                        <form action="contact-handler.php" method="POST" class="contact-form">
+>>>>>>> 3563847 (three new project page created)
                            <div class="col-md-12">
                               <div class="row">
-                                 <div class="form-group">
-                                    <input class="form-control" id="name" name="name" placeholder="Name" type="text">
+                                 <div class="form-group cf-input-wrap">
+                                    <span class="cf-icon"><i class="fa fa-user"></i></span>
+                                    <input class="form-control" id="name" name="name" placeholder="Full Name *" type="text">
                                     <span class="alert-error"></span>
                                  </div>
                               </div>
                            </div>
                            <div class="row">
                               <div class="col-md-6">
-                                 <div class="form-group">
-                                    <input class="form-control" id="email" name="email" placeholder="Email*" type="email">
+                                 <div class="form-group cf-input-wrap">
+                                    <span class="cf-icon"><i class="fa fa-envelope"></i></span>
+                                    <input class="form-control" id="email" name="email" placeholder="Email Address *" type="email">
                                     <span class="alert-error"></span>
                                  </div>
                               </div>
                               <div class="col-md-6">
-                                 <div class="form-group">
-                                    <input class="form-control" id="phone" name="phone" placeholder="Phone*" type="tel">
+                                 <div class="form-group cf-input-wrap">
+                                    <span class="cf-icon"><i class="fa fa-phone"></i></span>
+                                    <input class="form-control" id="phone" name="phone" placeholder="Phone Number *" type="tel">
                                     <span class="alert-error"></span>
                                  </div>
                               </div>
                            </div>
                            <div class="row">
                               <div class="col-md-12">
-                                 <div class="form-group">
-                                    <input class="form-control" id="organization" name="organization" placeholder="Organization" type="text">
+                                 <div class="form-group cf-input-wrap">
+                                    <span class="cf-icon"><i class="fa fa-building"></i></span>
+                                    <input class="form-control" id="organization" name="organization" placeholder="Organization / Company" type="text">
                                     <span class="alert-error"></span>
                                  </div>
                               </div>
                            </div>
                            <div class="col-md-12">
                               <div class="row">
-                                 <div class="form-group">
+                                 <div class="form-group cf-input-wrap cf-select-wrap">
+                                    <span class="cf-icon"><i class="fa fa-tag"></i></span>
                                     <select class="form-control" id="interest" name="interest">
-                                       <option value="">Interest Area</option>
+                                       <option value="">Select Interest Area</option>
                                        <option value="partnership">Partnership Opportunity</option>
-                                       <option value="funding">Funding/Investment</option>
+                                       <option value="funding">Funding / Investment</option>
                                        <option value="consulting">Consulting Services</option>
-                                       <option value="volunteer">Volunteer/Internship</option>
+                                       <option value="volunteer">Volunteer / Internship</option>
                                        <option value="other">Other Inquiry</option>
                                     </select>
                                  </div>
@@ -877,7 +893,8 @@
                            </div>
                            <div class="col-md-12">
                               <div class="row">
-                                 <div class="form-group comments">
+                                 <div class="form-group comments cf-input-wrap cf-textarea-wrap">
+                                    <span class="cf-icon"><i class="fa fa-pencil"></i></span>
                                     <textarea class="form-control" id="comments" name="comments" placeholder="Tell us about your inquiry *"></textarea>
                                  </div>
                               </div>
@@ -885,7 +902,7 @@
                            <div class="col-md-12">
                               <div class="row">
                                  <button type="submit" name="submit" id="submit">
-                                 Send Message
+                                    <i class="fa fa-paper-plane"></i> Send Message
                                  </button>
                               </div>
                            </div>
@@ -919,7 +936,7 @@
                            sustainable rural development through the CFAD approach and Decentralized Renewable 
                            Energy solutions.
                         </p>
-                        <h5>Stay Updated</h5>
+                      <!--  <h5>Stay Updated</h5>
                         <form action="#">
                            <div class="input-group stylish-input-group">
                               <input type="email" placeholder="Enter your e-mail here" class="form-control" name="email">
@@ -929,7 +946,7 @@
                               </button>  
                               </span>
                            </div>
-                        </form>
+                        </form> -->
                      </div>
                   </div>
                   <div class="col-md-2 col-sm-6 equal-height item">

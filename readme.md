@@ -16,3 +16,7 @@ git push -u origin main
 git remote add origin https://github.com/BPSVCFAD/bpsv.git
 git branch -M main
 git push -u origin main
+
+git add .
+git commit -m "Added contact form"
+git push

@@ -5090,16 +5090,6 @@ footer .f-items .f-item.link li:last-child {
   top: 0;
 }
 
-.se-pre-con {
-  position: fixed;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  z-index: 999999;
-  background: url(assets/img/preloader.gif) center no-repeat #fff;
-  text-align: center;
-=======
 /* ----------------------------------
 
 Template Name: Gostart - Startup Landing Page Template

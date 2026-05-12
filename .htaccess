@@ -1,9 +1,0 @@
-# Allow GET and POST methods to PHP files at the root level
-<FilesMatch "\.php$">
-    <LimitExcept GET POST HEAD OPTIONS>
-        Require all denied
-    </LimitExcept>
-</FilesMatch>
-
-# Prevent directory listing
-Options -Indexes

@@ -81,305 +81,317 @@
         /* ==================================================
             # Equal Height Init
         ===============================================*/
-        $(window).on('resize', function() {
-            $(".equal-height").equalHeights();
-        });
-
-        $(".equal-height").equalHeights().find("img, iframe, object").on('load', function() {
-            $(".equal-height").equalHeights();
-        });
+        if ($.fn.equalHeights) {
+            $(window).on('resize', function() {
+                $(".equal-height").equalHeights();
+            });
+            $(".equal-height").equalHeights().find("img, iframe, object").on('load', function() {
+                $(".equal-height").equalHeights();
+            });
+        }
 
 
         /* ==================================================
             # Youtube Video Init
          ===============================================*/
-        $('.player').mb_YTPlayer();
+        if ($.fn.mb_YTPlayer && $('.player').length) {
+            $('.player').mb_YTPlayer();
+        }
 
 
         /* ==================================================
             # imagesLoaded active
         ===============================================*/
-        $('#portfolio-grid,.blog-masonry').imagesLoaded(function() {
+        if ($.fn.imagesLoaded && ($('#portfolio-grid').length || $('.blog-masonry').length)) {
+            $('#portfolio-grid,.blog-masonry').imagesLoaded(function() {
 
-            /* Filter menu */
-            $('.mix-item-menu').on('click', 'button', function() {
-                var filterValue = $(this).attr('data-filter');
-                $grid.isotope({
-                    filter: filterValue
+                /* Filter menu */
+                $('.mix-item-menu').on('click', 'button', function() {
+                    var filterValue = $(this).attr('data-filter');
+                    $grid.isotope({
+                        filter: filterValue
+                    });
                 });
-            });
 
-            /* filter menu active class  */
-            $('.mix-item-menu button').on('click', function(event) {
-                $(this).siblings('.active').removeClass('active');
-                $(this).addClass('active');
-                event.preventDefault();
-            });
+                /* filter menu active class  */
+                $('.mix-item-menu button').on('click', function(event) {
+                    $(this).siblings('.active').removeClass('active');
+                    $(this).addClass('active');
+                    event.preventDefault();
+                });
 
-            /* Filter active */
-            var $grid = $('#portfolio-grid').isotope({
-                itemSelector: '.pf-item',
-                percentPosition: true,
-                masonry: {
-                    columnWidth: '.pf-item',
-                }
-            });
+                /* Filter active */
+                var $grid = $('#portfolio-grid').isotope({
+                    itemSelector: '.pf-item',
+                    percentPosition: true,
+                    masonry: {
+                        columnWidth: '.pf-item',
+                    }
+                });
 
-            /* Filter active */
-            $('.blog-masonry').isotope({
-                itemSelector: '.blog-item',
-                percentPosition: true,
-                masonry: {
-                    columnWidth: '.blog-item',
-                }
-            });
+                /* Filter active */
+                $('.blog-masonry').isotope({
+                    itemSelector: '.blog-item',
+                    percentPosition: true,
+                    masonry: {
+                        columnWidth: '.blog-item',
+                    }
+                });
 
-        });
+            });
+        }
 
 
          /* ==================================================
             # Fun Factor Init
         ===============================================*/
-        $('.timer').countTo();
-        $('.fun-fact').appear(function() {
+        if ($.fn.countTo && $('.timer').length) {
             $('.timer').countTo();
-        }, {
-            accY: -100
-        });
+            $('.fun-fact').appear(function() {
+                $('.timer').countTo();
+            }, {
+                accY: -100
+            });
+        }
 
 
         /* ==================================================
             # Magnific popup init
          ===============================================*/
-        $(".popup-link").magnificPopup({
-            type: 'image',
-            // other options
-        });
-
-        $(".popup-gallery").magnificPopup({
-            type: 'image',
-            gallery: {
-                enabled: true
-            },
-            // other options
-        });
-
-        $(".popup-youtube, .popup-vimeo, .popup-gmaps").magnificPopup({
-            type: "iframe",
-            mainClass: "mfp-fade",
-            removalDelay: 160,
-            preloader: false,
-            fixedContentPos: false
-        });
-
-        $('.magnific-mix-gallery').each(function() {
-            var $container = $(this);
-            var $imageLinks = $container.find('.item');
-
-            var items = [];
-            $imageLinks.each(function() {
-                var $item = $(this);
-                var type = 'image';
-                if ($item.hasClass('magnific-iframe')) {
-                    type = 'iframe';
-                }
-                var magItem = {
-                    src: $item.attr('href'),
-                    type: type
-                };
-                magItem.title = $item.data('title');
-                items.push(magItem);
+        if ($.fn.magnificPopup) {
+            $(".popup-link").magnificPopup({
+                type: 'image',
+                // other options
             });
 
-            $imageLinks.magnificPopup({
-                mainClass: 'mfp-fade',
-                items: items,
-                gallery: {
-                    enabled: true,
-                    tPrev: $(this).data('prev-text'),
-                    tNext: $(this).data('next-text')
-                },
+            $(".popup-gallery").magnificPopup({
                 type: 'image',
-                callbacks: {
-                    beforeOpen: function() {
-                        var index = $imageLinks.index(this.st.el);
-                        if (-1 !== index) {
-                            this.goTo(index);
+                gallery: {
+                    enabled: true
+                },
+                // other options
+            });
+
+            $(".popup-youtube, .popup-vimeo, .popup-gmaps").magnificPopup({
+                type: "iframe",
+                mainClass: "mfp-fade",
+                removalDelay: 160,
+                preloader: false,
+                fixedContentPos: false
+            });
+
+            $('.magnific-mix-gallery').each(function() {
+                var $container = $(this);
+                var $imageLinks = $container.find('.item');
+
+                var items = [];
+                $imageLinks.each(function() {
+                    var $item = $(this);
+                    var type = 'image';
+                    if ($item.hasClass('magnific-iframe')) {
+                        type = 'iframe';
+                    }
+                    var magItem = {
+                        src: $item.attr('href'),
+                        type: type
+                    };
+                    magItem.title = $item.data('title');
+                    items.push(magItem);
+                });
+
+                $imageLinks.magnificPopup({
+                    mainClass: 'mfp-fade',
+                    items: items,
+                    gallery: {
+                        enabled: true,
+                        tPrev: $(this).data('prev-text'),
+                        tNext: $(this).data('next-text')
+                    },
+                    type: 'image',
+                    callbacks: {
+                        beforeOpen: function() {
+                            var index = $imageLinks.index(this.st.el);
+                            if (-1 !== index) {
+                                this.goTo(index);
+                            }
                         }
+                    }
+                });
+            });
+        }
+
+
+        if ($.fn.owlCarousel) {
+            /* ==================================================
+                # Example Carousel
+             ===============================================*/
+            $('.testimonial-carousel').owlCarousel({
+                loop: false,
+                nav: false,
+                dots: true,
+                autoplay: true,
+                items: 1,
+                navText: [
+                    "<i class='fa fa-angle-left'></i>",
+                    "<i class='fa fa-angle-right'></i>"
+                ],
+            });
+
+
+            /* ==================================================
+                # Banner Carousel
+             ===============================================*/
+            $('.banner-carousel').owlCarousel({
+                loop: false,
+                nav: true,
+                dots: false,
+                autoplay: true,
+                items: 1,
+                navText: [
+                    "<i class='fa fa-angle-left'></i>",
+                    "<i class='fa fa-angle-right'></i>"
+                ],
+            });
+
+
+            /* ==================================================
+                # Companies Carousel
+             ===============================================*/
+            $('.companies-carousel').owlCarousel({
+                loop: false,
+                margin: 30,
+                nav: false,
+                navText: [
+                    "<i class='fa fa-angle-left'></i>",
+                    "<i class='fa fa-angle-right'></i>"
+                ],
+                dots: false,
+                autoplay: true,
+                responsive: {
+                    0: {
+                        items: 2
+                    },
+                    600: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 4
                     }
                 }
             });
-        });
 
-
-        /* ==================================================
-            # Example Carousel
-         ===============================================*/
-        $('.testimonial-carousel').owlCarousel({
-            loop: false,
-            nav: false,
-            dots: true,
-            autoplay: true,
-            items: 1,
-            navText: [
-                "<i class='fa fa-angle-left'></i>",
-                "<i class='fa fa-angle-right'></i>"
-            ],
-        });
-
-
-        /* ==================================================
-            # Banner Carousel
-         ===============================================*/
-        $('.banner-carousel').owlCarousel({
-            loop: false,
-            nav: true,
-            dots: false,
-            autoplay: true,
-            items: 1,
-            navText: [
-                "<i class='fa fa-angle-left'></i>",
-                "<i class='fa fa-angle-right'></i>"
-            ],
-        });
-
-
-        /* ==================================================
-            # Companies Carousel
-         ===============================================*/
-        $('.companies-carousel').owlCarousel({
-            loop: false,
-            margin: 30,
-            nav: false,
-            navText: [
-                "<i class='fa fa-angle-left'></i>",
-                "<i class='fa fa-angle-right'></i>"
-            ],
-            dots: false,
-            autoplay: true,
-            responsive: {
-                0: {
-                    items: 2
-                },
-                600: {
-                    items: 3
-                },
-                1000: {
-                    items: 4
+            /* ==================================================
+                # Portfolio Carousel
+             ===============================================*/
+            $('.portfolio-carousel-3-col').owlCarousel({
+                loop: false,
+                margin: 1,
+                nav: true,
+                navText: [
+                    "<i class='fa fa-angle-left'></i>",
+                    "<i class='fa fa-angle-right'></i>"
+                ],
+                dots: false,
+                autoplay: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 3
+                    }
                 }
-            }
-        });
+            });
 
-        /* ==================================================
-            # Portfolio Carousel
-         ===============================================*/
-        $('.portfolio-carousel-3-col').owlCarousel({
-            loop: false,
-            margin: 1,
-            nav: true,
-            navText: [
-                "<i class='fa fa-angle-left'></i>",
-                "<i class='fa fa-angle-right'></i>"
-            ],
-            dots: false,
-            autoplay: true,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 2
-                },
-                1000: {
-                    items: 3
+
+            /* ==================================================
+                # Services Carousel
+             ===============================================*/
+            $('.services-carousel').owlCarousel({
+                loop: false,
+                margin: 30,
+                nav: true,
+                navText: [
+                    "<i class='fa fa-angle-left'></i>",
+                    "<i class='fa fa-angle-right'></i>"
+                ],
+                dots: false,
+                autoplay: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 3
+                    }
                 }
-            }
-        });
+            });
 
 
-        /* ==================================================
-            # Services Carousel
-         ===============================================*/
-        $('.services-carousel').owlCarousel({
-            loop: false,
-            margin: 30,
-            nav: true,
-            navText: [
-                "<i class='fa fa-angle-left'></i>",
-                "<i class='fa fa-angle-right'></i>"
-            ],
-            dots: false,
-            autoplay: true,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 2
-                },
-                1000: {
-                    items: 3
+            /* ==================================================
+                # Services Carousel 4 Colums
+             ===============================================*/
+            $('.services-carousel-4-col').owlCarousel({
+                loop: false,
+                margin: 30,
+                nav: true,
+                navText: [
+                    "<i class='fa fa-angle-left'></i>",
+                    "<i class='fa fa-angle-right'></i>"
+                ],
+                dots: false,
+                autoplay: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 4
+                    }
                 }
-            }
-        });
-
-
-
-        /* ==================================================
-            # Services Carousel 4 Colums
-         ===============================================*/
-        $('.services-carousel-4-col').owlCarousel({
-            loop: false,
-            margin: 30,
-            nav: true,
-            navText: [
-                "<i class='fa fa-angle-left'></i>",
-                "<i class='fa fa-angle-right'></i>"
-            ],
-            dots: false,
-            autoplay: true,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 2
-                },
-                1000: {
-                    items: 4
-                }
-            }
-        });
+            });
+        }
 
 
         /* ==================================================
             Progressbar Init
          ===============================================*/
-         function animateElements() {
-            $('.progressbar').each(function () {
-                var elementPos = $(this).offset().top;
-                var topOfWindow = $(window).scrollTop();
-                var percent = $(this).find('.circle').attr('data-percent');
-                var animate = $(this).data('animate');
-                if (elementPos < topOfWindow + $(window).height() - 30 && !animate) {
-                    $(this).data('animate', true);
-                    $(this).find('.circle').circleProgress({
-                        // startAngle: -Math.PI / 2,
-                        value: percent / 100,
-                        size : 400,
-                        thickness: 25,
-                        fill: {
-                            color: '#2FA7A3'
-                        }
-                    }).on('circle-animation-progress', function (event, progress, stepValue) {
-                        $(this).find('strong').text((stepValue*100).toFixed(0) + "%");
-                    }).stop();
-                }
-            });
-        }
+        if ($.fn.circleProgress && $('.progressbar').length) {
+            function animateElements() {
+                $('.progressbar').each(function () {
+                    var elementPos = $(this).offset().top;
+                    var topOfWindow = $(window).scrollTop();
+                    var percent = $(this).find('.circle').attr('data-percent');
+                    var animate = $(this).data('animate');
+                    if (elementPos < topOfWindow + $(window).height() - 30 && !animate) {
+                        $(this).data('animate', true);
+                        $(this).find('.circle').circleProgress({
+                            // startAngle: -Math.PI / 2,
+                            value: percent / 100,
+                            size : 400,
+                            thickness: 25,
+                            fill: {
+                                color: '#2FA7A3'
+                            }
+                        }).on('circle-animation-progress', function (event, progress, stepValue) {
+                            $(this).find('strong').text((stepValue*100).toFixed(0) + "%");
+                        }).stop();
+                    }
+                });
+            }
 
-        animateElements();
-        $(window).scroll(animateElements);
+            animateElements();
+            $(window).scroll(animateElements);
+        }
 
 
         /* ==================================================

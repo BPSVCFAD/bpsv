@@ -1,126 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-   <head>
-      <!-- ========== Meta Tags ========== -->
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="description" content="BPSV - Beyond Purpose Social Ventures | Sustainable Development, CFAD, DRE Solutions">
-      <!-- ========== Page Title ========== -->
-      <title>BPSV - Beyond Purpose Social Ventures</title>
-      <!-- ========== Favicon Icon ========== -->
-      <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
-      <!-- ========== Start Stylesheet ========== -->
-      <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-      <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
-      <link href="assets/css/themify-icons.css" rel="stylesheet" />
-      <link href="assets/css/flaticon-set.css" rel="stylesheet" />
-      <link href="assets/css/magnific-popup.css" rel="stylesheet" />
-      <link href="assets/css/owl.carousel.min.css" rel="stylesheet" />
-      <link href="assets/css/owl.theme.default.min.css" rel="stylesheet" />
-      <link href="assets/css/animate.css" rel="stylesheet" />
-      <link href="assets/css/bootsnav.css" rel="stylesheet" />
-      <link href="assets/css/about.css" rel="stylesheet" />
-      <link href="style.css" rel="stylesheet">
-      <link href="assets/css/responsive.css" rel="stylesheet" />
-      <link href="assets/css/custom.css" rel="stylesheet" />
-      <style>
-         .banner-area .carousel-control { z-index: 100 !important; }
-         .navbar-brand.brand-premium {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-         }
-         .navbar-brand.brand-premium .logo {
-            width: 20%;
-         }
-         
-         .navbar-brand.brand-premium .logo-text {
-            font-family: "Poppins", sans-serif;
-            font-size: 14px;
-            font-weight: 600;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            line-height: 1;
-            padding: 7px 12px;
-            border-radius: 999px;
-            transition: all 0.25s ease;
-            margin-left: 2px;
-            white-space: nowrap;
-         }
-         @media (max-width: 767px) {
-            .navbar-brand.brand-premium .logo-text {
-               font-size: 12px;
-               letter-spacing: 0.05em;
-               padding: 6px 9px;
-            }
-         }
-         .navbar-brand.brand-premium .logo-text.logo-display {
-            color: #ffffff;
-            background: rgba(255, 255, 255, 0.12);
-            border: 1px solid rgba(255, 255, 255, 0.35);
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
-         }
-         .navbar-brand.brand-premium .logo-text.logo-scrolled {
-            color: #12213a;
-            background: rgba(18, 33, 58, 0.08);
-            border: 1px solid rgba(18, 33, 58, 0.25);
-         }
-      </style>
-   
-      <!-- ========== End Stylesheet ========== -->
-      <!-- ========== Google Fonts ========== -->
-      <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800" rel="stylesheet">
-   </head>
-   <body>
-      <!-- Preloader Start -->
-      <div class="se-pre-con"></div>
-      <!-- Preloader Ends -->
-      <!-- Header 
-         ============================================= -->
-      <header id="home">
-         <nav class="navbar navbar-default navbar-fixed white no-background bootsnav">
-            <div class="container-full">
-               <div class="attr-nav button fixed-nav">
-                  <ul>
-                     <li>
-                        <a href="#contact">Get Started</a>
-                     </li>
-                  </ul>
-               </div>
-               <div class="navbar-header">
-                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-                  <i class="fa fa-bars"></i>
-                  </button>
-                  <a class="navbar-brand brand-premium" href="#home">
-                  <img src="assets/img/logo-light.png" class="logo logo-display" alt="BPSV Logo">
-                  <img src="assets/img/logo1.1.png" class="logo logo-scrolled" alt="BPSV Logo" style="width: 60px;">
-                  <span class="logo-text logo-display">Beyond Purpose</span>
-                  <span class="logo-text logo-scrolled">Beyond Purpose</span>
-                  </a>
-               </div>
-               <div class="collapse navbar-collapse" id="navbar-menu">
-                  <ul class="nav navbar-nav navbar-right" data-in="#" data-out="#">
-                     <li class="active"><a href="#home" class="smooth-menu">Home</a></li>
-                     <li><a class="smooth-menu" href="#about">About</a></li>
-                     <li class="dropdown">
-                        <a href="#portfolio" class="smooth-menu dropdown-toggle" data-toggle="dropdown">Projects</a>
-                        <ul class="dropdown-menu">
-                           <li><a href="projects/efficiency-for-access-enabling-dre-agribusiness/">Efficiency for Access: Enabling DRE Agribusiness</a></li>
-                           <li><a href="projects/using-PURE-appliances-in-the-Livelihoods-Enterprises/">CLASP MAF – Scaling DRE through Ecosystem Building</a></li>
-                           <li><a href="projects/doorstep-business-services/">DRIVE – Doorstep Business Services for Women Foodpreneurs</a></li>
-                        </ul>
-                     </li>
-                     <li><a class="smooth-menu" href="#team">Team</a></li>
-                     <li><a class="smooth-menu" href="#contact">Contact</a></li>
-                  </ul>
-               </div>
-            </div>
-         </nav>
-      </header>
-      <!-- End Header -->
-      <!-- Start Banner 
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/bpsv/config.php';
+$pageTitle      = 'BPSV - Beyond Purpose Social Ventures';
+$metaDesc       = 'BPSV - Beyond Purpose Social Ventures | Sustainable Development, CFAD, DRE Solutions';
+$currentPage    = 'home';
+$currentProject = '';
+$pageStyles     = '.banner-area .carousel-control { z-index: 100 !important; }';
+$pageScripts    = "$(document).ready(function(){ $('#bootcarousel').carousel({interval: 5000}); });";
+require INC . 'header.php';
+?>
+      <!-- Start Banner
          ============================================= -->
       <div class="banner-area banner-redesign bg-gradient bg-theme-responsive bg-center text-light" style="background-image: url(assets/img/shape/banner.png);">
          <div id="bootcarousel" class="carousel light-bg top-padding text-dark slide animate_text">
@@ -289,7 +177,7 @@
                      <h4>Our Expertise</h4>
                      <h2>Core <strong>Services</strong></h2>
                      <p>
-                        BPSV provides integrated solutions for sustainable rural development through technology, 
+                        BPSV provides integrated solutions for sustainable rural development through technology,
                         community engagement, and capacity building.
                      </p>
                   </div>
@@ -307,10 +195,10 @@
                            </div>
                            <h4>CFAD Ecosystem Building</h4>
                            <p>
-                              Community-driven development centers that accelerate local enterprise growth 
+                              Community-driven development centers that accelerate local enterprise growth
                               through training, resources, and market linkages.
                            </p>
-                           
+
                         </div>
                         <div class="item">
                            <div class="icon">
@@ -318,10 +206,10 @@
                            </div>
                            <h4>DRE Solutions</h4>
                            <p>
-                              Decentralized Renewable Energy systems for agri-processing, replacing diesel 
+                              Decentralized Renewable Energy systems for agri-processing, replacing diesel
                               with sustainable solar-powered alternatives.
                            </p>
-                       
+
                         </div>
                         <div class="item">
                            <div class="icon">
@@ -329,10 +217,10 @@
                            </div>
                            <h4>Enterprise Support</h4>
                            <p>
-                              End-to-end support for rural entrepreneurs including technology implementation, 
+                              End-to-end support for rural entrepreneurs including technology implementation,
                               maintenance services, and business development.
                            </p>
-                            
+
                         </div>
                         <div class="item">
                            <div class="icon">
@@ -340,10 +228,10 @@
                            </div>
                            <h4>Consulting & Evaluation</h4>
                            <p>
-                              Monitoring, evaluation, and consulting services for development organizations 
+                              Monitoring, evaluation, and consulting services for development organizations
                               and government bodies on sustainable rural development.
                            </p>
-                           
+
                         </div>
                      </div>
                   </div>
@@ -482,7 +370,7 @@
          </div>
       </div>
       <!-- End Work Process Area -->
-      <!-- Start Portfolio 
+      <!-- Start Portfolio
          ============================================= -->
       <div id="portfolio" class="portfolio-area default-padding-top">
          <div class="container">
@@ -492,7 +380,7 @@
                      <h4>Our Impact</h4>
                      <h2>Current <strong>Projects</strong></h2>
                      <p>
-                        BPSV's work is funded through strategic partnerships with development organizations 
+                        BPSV's work is funded through strategic partnerships with development organizations
                         focused on sustainable rural development and climate adaptation.
                      </p>
                   </div>
@@ -564,9 +452,10 @@
             </div>
          </div>
       </div>
+      <br><br>
       <!-- End Portfolio -->
 <!-- Start Team Area -->
-<div id="team" class="team-area shape default-padding bottom-less">
+<!-- <div id="team" class="team-area shape default-padding bottom-less">
    <div class="container">
 
       <div class="row">
@@ -680,7 +569,7 @@
                      </ul>
                   </div>
                </div>
-               
+
                <div class="info">
                   <h4>Rohan Bose</h4>
                   <span>Software Analyst</span>
@@ -691,10 +580,10 @@
 
       </div>
    </div>
-</div>
+</div> -->
 <!-- End Team Area -->
 
-      <!-- Start Testimonials Area 
+      <!-- Start Testimonials Area
          ============================================= -->
       <div class="testimonials-area default-padding bg-dark text-light">
          <div class="container">
@@ -720,6 +609,7 @@
                            <p>
                               Primary funding partner for CFAD expansion and rural entrepreneur projects. Supporting our work in Northeast India with sustainable energy solutions and enterprise development initiatives.
                            </p>
+                           <a href="/bpsv/projects/using-PURE-appliances-in-the-Livelihoods-Enterprises/" style="display:inline-block; margin-top:10px; color:#fff; font-weight:600; font-size:13px; text-decoration:none; letter-spacing:0.03em;">Learn More <i class="fa fa-arrow-right" style="font-size:11px; color:#fff;"></i></a>
                         </div>
                      </div>
                      <div class="item">
@@ -733,6 +623,7 @@
                            <p>
                               Supporting climate adaptation work in Karnataka through community-based renewable energy solutions. Partnering for sustainable rural development and climate resilience initiatives.
                            </p>
+                           <a href="/bpsv/projects/" style="display:inline-block; margin-top:10px; color:#fff; font-weight:600; font-size:13px; text-decoration:none; letter-spacing:0.03em;">Learn More <i class="fa fa-arrow-right" style="font-size:11px; color:#fff;"></i></a>
                         </div>
                      </div>
 <div class="item">
@@ -746,6 +637,7 @@
       <p>
          Aahar Bazaar focuses on strengthening local food systems by connecting small producers with markets, improving access to affordable nutrition, and promoting sustainable livelihoods at the community level.
       </p>
+      <a href="/bpsv/projects/doorstep-business-services/" style="display:inline-block; margin-top:10px; color:#fff; font-weight:600; font-size:13px; text-decoration:none; letter-spacing:0.03em;">Learn More <i class="fa fa-arrow-right" style="font-size:11px; color:#fff;"></i></a>
    </div>
 </div>
 <div class="item">
@@ -759,6 +651,7 @@
       <p>
          United Way Hyderabad works to improve lives by mobilizing communities and resources to address critical issues in education, health, and livelihood, creating sustainable and inclusive development for underserved populations.
       </p>
+      <a href="/bpsv/projects/" style="display:inline-block; margin-top:10px; color:#fff; font-weight:600; font-size:13px; text-decoration:none; letter-spacing:0.03em;">Learn More <i class="fa fa-arrow-right" style="font-size:11px; color:#fff;"></i></a>
    </div>
 </div>
 
@@ -769,7 +662,7 @@
          </div>
       </div>
       <!-- End Testimonials Area -->
-      <!-- Start Contact Area 
+      <!-- Start Contact Area
          ============================================= -->
       <div id="contact" class="contact-area default-padding">
          <div class="container">
@@ -837,11 +730,8 @@
                      <div class="form-items bg-cover shadow dark-hard text-light">
                         <h2>Partner With <strong>Us</strong></h2>
                         <p>Interested in collaboration, funding opportunities, or learning more about our work?</p>
-<<<<<<< HEAD
                         <form action="https://formsubmit.co/rohan.bose@sauramandala.org" method="POST" class="contact-form">
-=======
                         <form action="contact-handler.php" method="POST" class="contact-form">
->>>>>>> 3563847 (three new project page created)
                            <div class="col-md-12">
                               <div class="row">
                                  <div class="form-group cf-input-wrap">
@@ -917,140 +807,4 @@
          </div>
       </div>
       <!-- End Contact Area -->
-      <!-- Start Footer 
-         ============================================= -->
-      <footer>
-         <div class="svg-shape">
-            <svg xmlns="http://www.w3.org/2000/svg" class="gray" preserveAspectRatio="none" viewBox="0 0 1070 52">
-               <path d="M0,0S247,91,505,32c261.17-59.72,565-13,565-13V0Z"></path>
-            </svg>
-         </div>
-         <div class="container">
-            <div class="f-items default-padding">
-               <div class="row">
-                  <div class="col-md-4 col-sm-6 equal-height item">
-                     <div class="f-item about">
-                        <img src="assets/img/logo.png" alt="BPSV Logo">
-                        <p>
-                           Beyond Purpose Social Ventures (BPSV) is a people-first organization dedicated to 
-                           sustainable rural development through the CFAD approach and Decentralized Renewable 
-                           Energy solutions.
-                        </p>
-                      <!--  <h5>Stay Updated</h5>
-                        <form action="#">
-                           <div class="input-group stylish-input-group">
-                              <input type="email" placeholder="Enter your e-mail here" class="form-control" name="email">
-                              <span class="input-group-addon">
-                              <button type="submit">
-                              <i class="fa fa-paper-plane"></i>
-                              </button>  
-                              </span>
-                           </div>
-                        </form> -->
-                     </div>
-                  </div>
-                  <div class="col-md-2 col-sm-6 equal-height item">
-                     <div class="f-item link">
-                        <h4>Quick Links</h4>
-                        <ul>
-                           <li>
-                              <a href="#home">Home</a>
-                           </li>
-                           <li>
-                              <a href="#about">About Us</a>
-                           </li>
-                           <li>
-                              <a href="#portfolio">Projects</a>
-                           </li>
-                           <li>
-                              <a href="#team">Team</a>
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="col-md-2 col-sm-6 equal-height item">
-                     <div class="f-item link">
-                        <h4>Services</h4>
-                        <ul>
-                           <li>
-                              <a href="#services">CFAD Development</a>
-                           </li>
-                           <li>
-                              <a href="#services">DRE Solutions</a>
-                           </li>
-                           <li>
-                              <a href="#services">Enterprise Support</a>
-                           </li>
-                           <li>
-                              <a href="#services">Consulting</a>
-                           </li>
-                           <li>
-                              <a href="#contact">Partnerships</a>
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="col-md-4 col-sm-6 equal-height item">
-                     <div class="f-item twitter-widget">
-                        <h4>Contact Info</h4>
-                        <p>
-                           For enquiries and partnership opportunities, reach us at:
-                        </p>
-                        <div class="address">
-                           <ul>
-                              <li class="contact-item">
-                                 <div class="info" style="margin-bottom: 10px;">
-                                    <h5 style="margin-bottom: 0;">Email:</h5>
-                                    <span ><a href="mailto:info@beyondpurpose.in">info@beyondpurpose.in</a></span>
-                                 </div>
-                                 <div class="info" style="margin-bottom: 10px;">
-                                    <h5 style="margin-bottom: 0;">Phone:</h5>
-                                    <span><a href="tel:+916009212278">+91 60092 12278</a></span>
-                                 </div>
-                                 <div class="info" style="margin-bottom: 10px;">
-                                    <h5 style="margin-bottom: 0;">Website:</h5>
-                                    <span><a href="https://www.beyondpurpose.in" target="_blank" rel="noopener">www.beyondpurpose.in</a></span>
-                                 </div>
-                              </li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <!-- Start Footer Bottom -->
-         <div class="footer-bottom bg-light">
-            <div class="container">
-               <div class="row">
-                  <div class="col-md-6">
-                     <p>&copy; Copyright 2026 BPSV - Beyond Purpose Social Ventures. All Rights Reserved.</p>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <!-- End Footer Bottom -->
-      </footer>
-      <!-- End Footer -->
-      <!-- jQuery Frameworks
-         ============================================= -->
-      <script src="assets/js/jquery-1.12.4.min.js"></script>
-      <script src="assets/js/bootstrap.min.js"></script>
-      <script src="assets/js/equal-height.min.js"></script>
-      <script src="assets/js/jquery.appear.js"></script>
-      <script src="assets/js/jquery.easing.min.js"></script>
-      <script src="assets/js/jquery.magnific-popup.min.js"></script>
-      <script src="assets/js/modernizr.custom.13711.js"></script>
-      <script src="assets/js/owl.carousel.min.js"></script>
-      <script src="assets/js/wow.min.js"></script>
-      <script src="assets/js/progress-bar.min.js"></script>
-      <script src="assets/js/isotope.pkgd.min.js"></script>
-      <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-      <script src="assets/js/count-to.js"></script>
-      <script src="assets/js/YTPlayer.min.js"></script>
-      <script src="assets/js/circle-progress.js"></script>
-      <script src="assets/js/bootsnav.js"></script>
-      <script src="assets/js/main.js"></script>
-      <script>$(document).ready(function(){ $('#bootcarousel').carousel({interval: 5000}); });</script>
-   </body>
-</html>
+<?php require INC . 'footer.php'; ?>

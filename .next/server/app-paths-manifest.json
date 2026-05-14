@@ -1,6 +1,7 @@
 {
+  "/api/contact/route": "app/api/contact/route.js",
   "/projects/page": "app/projects/page.js",
-  "/about/page": "app/about/page.js",
   "/contact/page": "app/contact/page.js",
+  "/about/page": "app/about/page.js",
   "/projects/efficiency-for-access-enabling-dre-agribusiness/page": "app/projects/efficiency-for-access-enabling-dre-agribusiness/page.js"
 }

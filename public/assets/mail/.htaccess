@@ -1,0 +1,5 @@
+Options -Indexes
+Deny from all
+<Files "contact.php">
+  Allow from all
+</Files>

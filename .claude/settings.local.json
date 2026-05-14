@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell -Command \"Move-Item -Path 'C:\\\\xampp\\\\htdocs\\\\bpsv website\\\\assets' -Destination 'C:\\\\xampp\\\\htdocs\\\\bpsv website\\\\public\\\\assets' -Force\")",
+      "Bash(powershell -Command \"Move-Item -Path 'C:\\\\xampp\\\\htdocs\\\\bpsv website\\\\style.css' -Destination 'C:\\\\xampp\\\\htdocs\\\\bpsv website\\\\public\\\\style.css' -Force\")",
+      "Bash(npm install:*)",
+      "Bash(npx next:*)",
+      "Bash(grep -E \"next|nodemailer|react$|react-dom\")"
+    ]
+  }
+}

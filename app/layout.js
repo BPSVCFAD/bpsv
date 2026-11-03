@@ -3,8 +3,23 @@ import Footer from '../components/Footer'
 import Scripts from '../components/Scripts'
 
 export const metadata = {
+  metadataBase: new URL('https://beyondpurpose.in'),
   title: 'BPSV — Beyond Purpose Social Ventures',
   description: 'A people-first social enterprise dedicated to building sustainable, resilient communities through doorstep incubation, clean energy, and ecosystem development.',
+  openGraph: {
+    title: 'BPSV — Beyond Purpose Social Ventures',
+    description: 'A people-first social enterprise dedicated to building sustainable, resilient communities through doorstep incubation, clean energy, and ecosystem development.',
+    url: 'https://beyondpurpose.in',
+    siteName: 'Beyond Purpose Social Ventures',
+    images: [{ url: '/assets/img/empower.png', width: 1200, height: 630, alt: 'Beyond Purpose Social Ventures' }],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'BPSV — Beyond Purpose Social Ventures',
+    description: 'A people-first social enterprise dedicated to building sustainable, resilient communities through doorstep incubation, clean energy, and ecosystem development.',
+    images: ['/assets/img/empower.png'],
+  },
 }
 
 export default function RootLayout({ children }) {

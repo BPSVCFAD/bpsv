@@ -270,6 +270,20 @@ const aboutStyles = `
 export const metadata = {
   title: 'About Us — BPSV',
   description: 'Learn about Beyond Purpose Social Ventures — our mission, vision, team, and work in sustainable rural development.',
+  openGraph: {
+    title: 'About Us — Beyond Purpose Social Ventures',
+    description: 'Learn about Beyond Purpose Social Ventures — our mission, vision, team, and work in sustainable rural development.',
+    url: 'https://beyondpurpose.in/about',
+    siteName: 'Beyond Purpose Social Ventures',
+    images: [{ url: '/assets/img/empower.png', width: 1200, height: 630, alt: 'About BPSV' }],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About Us — Beyond Purpose Social Ventures',
+    description: 'Learn about Beyond Purpose Social Ventures — our mission, vision, team, and work in sustainable rural development.',
+    images: ['/assets/img/empower.png'],
+  },
 }
 
 export default function About() {
@@ -502,7 +516,7 @@ export default function About() {
                 </div>
                 <div className="tc-info">
                   <h4>Gunajit Dev Sarma</h4>
-                  <div className="role">Project Manager</div>
+                  <div className="role">Implementation Lead &amp; Systems Strategist – PURE</div>
                   <p>Oversees project execution and on-ground implementation across communities.</p>
                 </div>
               </div>
